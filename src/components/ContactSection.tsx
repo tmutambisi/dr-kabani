@@ -87,12 +87,6 @@ export const ContactSection = () => {
                   Schedule a Call
                 </a>
               </Button>
-              <Button variant="heroOutline" size="lg" asChild>
-                <a href="#">
-                  <Download className="w-5 h-5" />
-                  Speaker Kit
-                </a>
-              </Button>
             </div>
           </motion.div>
 
