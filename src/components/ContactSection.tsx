@@ -13,8 +13,8 @@ const contactMethods = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+260 XXX XXX XXX",
-    action: "tel:+260XXXXXXXX",
+    value: "+260 979 961 647",
+    action: "tel:+260979961647",
   },
   {
     icon: MapPin,
@@ -46,7 +46,7 @@ export const ContactSection = () => {
             Book Dr. Kabani
           </h2>
           <p className="text-lg text-primary-foreground/80 max-w-3xl mx-auto">
-            Ready to bring transformative insights to your conference, organization, or event? 
+            Ready to bring transformative insights to your conference, organization, or event?
             Let's discuss how Dr. Kabani can add value to your audience.
           </p>
         </motion.div>

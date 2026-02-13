@@ -53,7 +53,7 @@ export const HeroSection = () => {
                 </a>
               </Button>
               <Button variant="outline" size="xl" asChild>
-                <a href="#speaking">
+                <a href="https://youtube.com/playlist?list=PL9cn5nd4z2Vj7A4FaR1HFSzGCozItCfP0&si=Xza7R_Wte7u3arIc" target="_blank" rel="noopener noreferrer">
                   <Play className="w-5 h-5" />
                   Watch Speaking Reel
                 </a>

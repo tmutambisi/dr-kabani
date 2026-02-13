@@ -61,7 +61,7 @@ export const SpeakingSection = () => {
             Speaking Engagements
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Dr. Kabani delivers transformative keynotes and workshops that inspire action, 
+            Dr. Kabani delivers transformative keynotes and workshops that inspire action,
             drive change, and leave lasting impact on audiences worldwide.
           </p>
         </motion.div>
@@ -140,9 +140,14 @@ export const SpeakingSection = () => {
               </span>
             ))}
           </div>
-          <div className="text-center">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button variant="hero" size="lg" asChild>
               <a href="#contact">Invite Dr. Kabani to Speak</a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a href="https://youtube.com/playlist?list=PL9cn5nd4z2Vj7A4FaR1HFSzGCozItCfP0&si=Xza7R_Wte7u3arIc" target="_blank" rel="noopener noreferrer">
+                Watch Speaking Playlist
+              </a>
             </Button>
           </div>
         </motion.div>

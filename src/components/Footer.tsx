@@ -23,10 +23,10 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/dr-daniel-kabani-33159687/", label: "LinkedIn" },
+  { icon: Twitter, href: "https://x.com/kabani_daniel", label: "Twitter" },
+  { icon: Facebook, href: "https://www.facebook.com/Danielkabanidnk", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/kabani_daniel/", label: "Instagram" },
 ];
 
 export const Footer = () => {
@@ -152,7 +152,7 @@ export const Footer = () => {
         <div className="border-t border-card/10 pt-8 mb-8">
           <div className="text-center">
             <p className="text-card/70 text-sm mb-4 max-w-md mx-auto">
-              Thank you for taking the time to visit. I'd love to hear from you — 
+              Thank you for taking the time to visit. I'd love to hear from you —
               whether you have a question, an idea, or just want to say hello.
             </p>
             <p className="font-accent text-2xl text-primary transform -rotate-1">
@@ -163,7 +163,7 @@ export const Footer = () => {
 
         {/* Copyright */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-card/40 text-sm">
-          <p>© {new Date().getFullYear()} Dr. Daniel Ngombo Kabani. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Dr. Daniel Ngombo Kabani. All rights reserved. Website developed and mantained by <a href="tungasonic.co.zw">TUNGASONIC</a></p>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-card transition-colors">
               Privacy Policy
