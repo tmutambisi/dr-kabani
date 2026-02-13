@@ -1,0 +1,267 @@
+@import "@fontsource/comfortaa/300.css";
+@import "@fontsource/comfortaa/400.css";
+@import "@fontsource/comfortaa/500.css";
+@import "@fontsource/comfortaa/600.css";
+@import "@fontsource/comfortaa/700.css";
+@import "@fontsource/open-sans/300.css";
+@import "@fontsource/open-sans/400.css";
+@import "@fontsource/open-sans/600.css";
+@import "@fontsource/open-sans/700.css";
+@import "@fontsource/la-belle-aurore/400.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand Colors - Dr. Kabani */
+    --brand-green: 120 100% 19%;
+    --brand-green-light: 120 60% 25%;
+    --brand-green-dark: 120 100% 12%;
+    --brand-orange: 25 97% 50%;
+    --brand-orange-light: 25 97% 60%;
+    --brand-orange-dark: 25 97% 40%;
+
+    /* Core Palette */
+    --background: 40 20% 98%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 120 100% 19%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 97% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 40 15% 92%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 120 30% 95%;
+    --accent-foreground: 120 100% 19%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 10% 88%;
+    --input: 40 10% 88%;
+    --ring: 120 100% 19%;
+
+    --radius: 0.5rem;
+
+    /* Typography */
+    --font-display: "Comfortaa", sans-serif;
+    --font-subheading: "Comfortaa", sans-serif;
+    --font-body: "Open Sans", sans-serif;
+    --font-accent: "La Belle Aurore", cursive;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(120 100% 19%) 0%, hsl(120 60% 25%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(25 97% 50%) 0%, hsl(25 97% 60%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsla(0 0% 0% / 0.7) 0%, hsla(0 0% 0% / 0.3) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px hsla(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsla(0 0% 0% / 0.1), 0 2px 4px -2px hsla(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsla(0 0% 0% / 0.1), 0 4px 6px -4px hsla(0 0% 0% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsla(0 0% 0% / 0.1), 0 8px 10px -6px hsla(0 0% 0% / 0.1);
+    --shadow-elegant: 0 25px 50px -12px hsla(120 100% 19% / 0.15);
+    --shadow-card: 0 4px 20px hsla(0 0% 0% / 0.08);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 8%;
+    --sidebar-primary: 120 100% 19%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 120 30% 95%;
+    --sidebar-accent-foreground: 120 100% 19%;
+    --sidebar-border: 40 10% 88%;
+    --sidebar-ring: 120 100% 19%;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 40 20% 96%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 40 20% 96%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 40 20% 96%;
+
+    --primary: 120 80% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 97% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 40 10% 60%;
+
+    --accent: 120 30% 15%;
+    --accent-foreground: 120 80% 50%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 120 80% 40%;
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 40 20% 96%;
+    --sidebar-primary: 120 80% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 120 30% 15%;
+    --sidebar-accent-foreground: 120 80% 50%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 120 80% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2 {
+    @apply font-display font-bold;
+  }
+
+  h3, h4, h5, h6 {
+    @apply font-subheading;
+  }
+
+  .font-accent {
+    font-family: var(--font-accent);
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+
+  .bg-gradient-accent {
+    background-image: var(--gradient-accent);
+  }
+
+  .bg-gradient-dark {
+    background-image: var(--gradient-dark);
+  }
+
+  .bg-gradient-overlay {
+    background-image: var(--gradient-overlay);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Decorative line */
+  .accent-line {
+    @apply w-16 h-1 bg-secondary rounded-full;
+  }
+
+  .accent-line-lg {
+    @apply w-24 h-1.5 bg-secondary rounded-full;
+  }
+
+  /* Stat card hover effect */
+  .stat-card {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+
+  .stat-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-hero opacity-0 transition-opacity duration-300;
+  }
+
+  .stat-card:hover::before {
+    @apply opacity-5;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+}
